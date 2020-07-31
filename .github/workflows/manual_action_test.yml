@@ -1,0 +1,11 @@
+name: Manual action test
+on: [manual]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: test
+    steps:
+      test:
+        name: test
+        run: echo test

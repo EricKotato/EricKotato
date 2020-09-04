@@ -1,0 +1,17 @@
+name: Dump env (macOS)
+on: push
+
+jobs:
+  test:
+    name: Dump
+    runs-on: macos-latest
+    steps:
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
+
+      - name: echo env
+        run: |
+                echo "ENV vars"
+                env

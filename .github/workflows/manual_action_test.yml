@@ -6,6 +6,5 @@ jobs:
     runs-on: ubuntu-latest
     name: test
     steps:
-      test:
-        name: test
+      - name: test
         run: echo test
